@@ -20,7 +20,6 @@
         <tbody>
             @foreach ($pictures as $picture)
             <tr>
-                <th scope="row">1</th>
                 <td>{{$picture->id}}</td>
                 <td>{{$picture->title}}</td>
                 <td>{{$picture->thumb}}</td>

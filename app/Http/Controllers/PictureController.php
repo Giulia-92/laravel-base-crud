@@ -44,7 +44,7 @@ class PictureController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Picture $picture)
+    public function show($id)
     {
         //$Picture = Picture::findOrFail($id);
         return view('pictures.show',compact('$picture'));

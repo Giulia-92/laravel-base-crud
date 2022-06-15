@@ -5,7 +5,7 @@
 
 @section('main')
 <main>
-    <h1 class="text-center">Pisture</h1>
+    <h1 class="text-center">Picture</h1>
 </main>
     
 @endsection

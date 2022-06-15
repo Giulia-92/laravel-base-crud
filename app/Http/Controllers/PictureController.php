@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Picture;
 class PictureController extends Controller
 {
     /**
@@ -13,7 +13,8 @@ class PictureController extends Controller
      */
     public function index()
     {
-        return view('pictures.index');
+        $Pictures = Picture::all();
+        return view('pictures.index',compact('pictures'));
     }
 
     /**
@@ -43,9 +44,10 @@ class PictureController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Picture $picture)
     {
-        return view('pictures.show');
+        //$Picture = Picture::findOrFail($id);
+        return view('pictures.show',compact('$picture'));
     }
 
     /**

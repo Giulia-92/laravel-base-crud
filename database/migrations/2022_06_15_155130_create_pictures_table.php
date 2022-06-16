@@ -15,12 +15,12 @@ class CreatePicturesTable extends Migration
     {
         Schema::create('pictures', function (Blueprint $table) {
             $table->id();
-            $table->string('title',30);
+            $table->string('title',50);
             $table->string('image');
-            $table->string('description',250);
-            $table->string('price',20);
-            $table->string('type',20);
-            $table->string('series',20);
+            $table->text('description')->nullable();
+            $table->float('price',4,2);
+            $table->string('type',50);
+            $table->string('series',80);
            
             $table->timestamps();
         });

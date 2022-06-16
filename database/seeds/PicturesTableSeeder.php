@@ -11,8 +11,8 @@ class PicturesTableSeeder extends Seeder
      */
     public function run()
     {
-        $Pictures = config('comics');
-        foreach($Pictures as $picture){
+        $pictures = config('comics');
+        foreach($pictures as $picture){
 
             $newPicture = new Picture();
             $newPicture->title = $picture['title'];

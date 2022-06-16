@@ -14,15 +14,15 @@ class PicturesTableSeeder extends Seeder
         $pictures = config('comics');
         foreach($pictures as $picture){
 
-            $newPicture = new Picture();
-            $newPicture->title = $picture['title'];
-            $newPicture->image = $picture['thumb'];
-            $newPicture->description = $picture['description'];
-            $newPicture->price = $picture['price'];
-            $newPicture->type = $picture['type'];
-            $newPicture->series = $picture['series'];
+            $newpicture = new Picture();
+            $newpicture->title = $picture['title'];
+            $newpicture->image = $picture['thumb'];
+            $newpicture->description = $picture['description'];
+            $newpicture->price = $picture['price'];
+            $newpicture->type = $picture['type'];
+            $newpicture->series = $picture['series'];
                 
-            $newPicture->save();
+            $newpicture->save();
         }
 
        

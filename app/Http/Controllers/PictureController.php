@@ -13,7 +13,7 @@ class PictureController extends Controller
      */
     public function index()
     {
-        $Pictures = Picture::all();
+        $pictures = Picture::all();
         return view('pictures.index',compact('pictures'));
     }
 

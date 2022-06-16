@@ -22,12 +22,12 @@
             <tr>
                 <td>{{$picture->id}}</td>
                 <td>{{$picture->title}}</td>
-                <td>{{$picture->thumb}}</td>
+                <td>{{$picture->image}}</td>
                 <td>{{$picture->type}}</td>
                 <td>{{$picture->price}}</td>
-                <td> <a href="{{route('pictures.show',$picture->id)}}" class="btn btn-succes">View Now</a></td>
-                <td> <a href="{{route('pictures.show',$picture->id)}}" class="btn btn-info"></a></td>
-                <td> <a href="{{route('pictures.show',$picture->id)}}" class="btn btn-alert"></a></td>
+                <td> <a href="{{route('pictures.show',$picture->id)}}" class="btn btn-success">View Now</a></td>
+                <td> <a href="{{route('pictures.show',$picture->id)}}" class="btn btn-info">Create</a></td>
+                <td> <a href="{{route('pictures.show',$picture->id)}}" class="btn btn-warning">Delete</a></td>
               </tr> 
             @endforeach
         </tbody>

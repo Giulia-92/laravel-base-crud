@@ -1,5 +1,5 @@
 <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
                 <img src="{{asset('img/dc-logo.png')}}" alt="logo" width="30" height="24">
@@ -11,7 +11,7 @@
             <div class="navbar-nav">
               <a class="nav-link active" aria-current="page" href="/">Home</a>
               <a class="nav-link" href="/pictures">Pictures</a>
-              <a class="nav-link" href="/picture/create">New Picture</a>
+              <a class="nav-link" href="/pictures/create">New Picture</a>
         
             </div>
           </div>

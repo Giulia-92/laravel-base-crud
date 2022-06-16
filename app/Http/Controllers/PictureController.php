@@ -35,7 +35,20 @@ class PictureController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+
+        $newpicture = new Picture();
+        $newpicture->title = $data['title'];
+        if (!empty($data['description'])){
+        $newpicture->image = $data['thumb'];
+        $newpicture->description = $data['description'];
+        }
+        $newpicture->price = $data['price'];
+        $newpicture->type = $data['type'];
+        $newpicture->series = $data['series'];
+            
+        $newpicture->save();
+        return redirect()->route('pictures.show', $newpicture->id);
     }
 
     /**

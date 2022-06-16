@@ -4,7 +4,9 @@
     
 
 @section('main')
-<h1 class="text-center">Novità</h1>
+<h1 class="text-center">Novità
+  <img src="{{asset('img/dc-logo.png')}}" alt="logo" width="50" height="50">
+</h1>
 <form action="{{route('pictures.store')}}" method="POST">
   @csrf
   <div class="container"> 
@@ -28,7 +30,7 @@
       <input type="text" class="form-control" id="image" aria-describedby="image" name="image" placeholder="Inserisci url immagine">
     </div>
     <div class="mb-3">
-      <label for="price" class="form-label">Prezzo</label>
+      <label for="price" class="form-label">Price</label>
       <input type="number" class="form-control" id="price" aria-describedby="price" name="price" placeholder="Inserisci prezzo">
     </div>
     <div class="mb-3">

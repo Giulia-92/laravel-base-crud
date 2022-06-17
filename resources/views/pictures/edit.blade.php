@@ -4,10 +4,11 @@
     
 
 @section('main')
-<h1 class="text-center"> Prodotto da editare</h1>
+<h1 class="text-center"> Modifica fumetto</h1>
     <form action="{{route('pictures.update',$picture->id)}}" method="POST">
       @csrf
       @method('PUT')
+      <div class="container">
         <div class="mb-3">
           <label for="title" class="form-label">Title</label>
           <input type="text" class="form-control" id="title" aria-describedby="title" name="title" value="{{$picture->title}}">
@@ -36,6 +37,7 @@
           <label for="series" class="form-label">Series</label>
           <input type="text" class="form-control" id="series" aria-describedby="series" name="series" value="{{$picture->series}}">
         </div>
-        <button type="submit" class="btn btn-primary">Modifica</button>
+        <button type="submit" class="btn btn-primary">Create</button>
+      </div>
       </form>
 @endsection

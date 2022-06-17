@@ -59,8 +59,8 @@ class PictureController extends Controller
      */
     public function show($id)
     {
-        //$Picture = Picture::findOrFail($id);
-        return view('pictures.show',compact('$picture'));
+        $picture = Picture::findOrFail($id);
+        return view('pictures.show',compact('picture'));
     }
 
     /**
@@ -71,7 +71,8 @@ class PictureController extends Controller
      */
     public function edit($id)
     {
-        //
+      $picture = Picture::FindOrFail($id);
+      return view('pictures.edit',compact('picture'));
     }
 
     /**
@@ -83,7 +84,17 @@ class PictureController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = $request->all();
+        $picture = Picture::FindOrFail($id);
+        $picture->title = $data['title'];
+        $picture->image = $data['image'];
+        $picture->description = $data['description'];
+        $picture->price = $data['price'];
+        $picture->type = $data['type'];
+        $picture->series = $data['series'];
+            
+        $picture->save();
+        return redirect()->route('pictures.show',$picture->id);
     }
 
     /**
@@ -94,6 +105,8 @@ class PictureController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $picture = Picture::FindOrFail($id);
+        $picture->delete();
+        return redirect()->route('pictures.index');
     }
 }
